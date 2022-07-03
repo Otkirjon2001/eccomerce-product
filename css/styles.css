@@ -1,8 +1,30 @@
 /* CUSTOM PROPERTY */
 :root{
-
+  --gray: #69707D;
+  --yellow: #FF7E1B;
+  --black: #1D2026;
+  --white: #fff;
 }
 /* FONTS */
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url('../fonts/') format('woff2'),
+      url('../fonts/KumbhSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url('../fonts/KumbhSans-Regular.woff2') format('woff2'),
+      url('../fonts/KumbhSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 /* GLOBAL */
 html{
@@ -20,12 +42,12 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-weight: 500;
+  font-family:'Kumbh Sans', "Arial", sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #000;
+  line-height: 26px;
+  background-color: var(--white);
+  color: var(--gray);
 }
 img{
   max-width: 100%;
@@ -53,11 +75,35 @@ a{
 /* CONTAINER  */
 .container{
   width: 100%;
-  max-width: 1240px;
+  max-width: 1150px;
   padding-right: 20px;
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* BUTTON */
+.button{
+  display: inline-block;
+  min-width: 272px;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  color: var(--white);
+  background-color: var(--yellow);
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+  box-shadow: 0px 20px 50px -20px #FF7E1B;
+}
+.button:hover{
+  opacity: 0.8;
+}
+.button:active{
+  opacity: 0.6;
 }
 /* AUTOFILL-STYLES */
 /* input:-webkit-autofill,
